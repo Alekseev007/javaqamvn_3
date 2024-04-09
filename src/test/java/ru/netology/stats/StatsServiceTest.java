@@ -26,7 +26,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void salesNumMonthMaxSales() {
+    public void monthMaxSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedNum = 8;
@@ -35,29 +35,29 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void salesNumMonthMinSales() {
+    public void monthMinSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedN = 9;
-        int actualN = service.minSales(sales);
-        Assertions.assertEquals(expectedN, actualN);
+        int expectedNum = 9;
+        int actualNum = service.minSales(sales);
+        Assertions.assertEquals(expectedNum, actualNum);
     }
 
     @Test
-    public void numMonSalesUnderAver() {
+    public void monthUnderAverage() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedNumb = 5;
-        int actualNumb = service.quaBelowAverage(sales);
-        Assertions.assertEquals(expectedNumb, actualNumb);
+        int expectedNum = 5;
+        int actualNum = service.quaBelowAverage(sales);
+        Assertions.assertEquals(expectedNum, actualNum);
     }
 
     @Test
-    public void numMonSalesAboveAver() {
+    public void monthAboveAverage() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedNumber = 5;
-        int actualNumber = service.quaAboveAverage(sales);
-        Assertions.assertEquals(expectedNumber, actualNumber);
+        int expectedNum = 5;
+        int actualNum = service.quaAboveAverage(sales);
+        Assertions.assertEquals(expectedNum, actualNum);
     }
 }

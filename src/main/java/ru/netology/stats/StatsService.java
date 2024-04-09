@@ -43,24 +43,26 @@ public class StatsService {
     }
 
     public int quaBelowAverage(int[] sales) {
-        int quaMonthBelowAverage = 0;
-        for (int n : sales) {
-            if (n < averageSales(sales)) {
-                quaMonthBelowAverage = quaMonthBelowAverage + 1;
+        int monthBelowAverage = 0;
+        int average = averageSales(sales);
+        for (int number : sales) {
+            if (number < average) {
+                monthBelowAverage = monthBelowAverage + 1;
             }
 
         }
-        return quaMonthBelowAverage;
+        return monthBelowAverage;
     }
 
     public int quaAboveAverage(int[] sales) {
-        int quaMonthAboveAverage = 0;
-        for (int c : sales) {
-            if (c > averageSales(sales)) {
-                quaMonthAboveAverage = quaMonthAboveAverage + 1;
+        int monthAboveAverage = 0;
+        int average = averageSales(sales);
+        for (int numb : sales) {
+            if (numb > average) {
+                monthAboveAverage = monthAboveAverage + 1;
             }
         }
-        return quaMonthAboveAverage;
+        return monthAboveAverage;
     }
 }
 
