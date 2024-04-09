@@ -1,17 +1,17 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int sumSales(int[] sales) {
-        int total = 0;
+    public long sumSales(long[] sales) {
+        long total = 0;
         for (int i = 0; i < sales.length; i++) {
             total = total + sales[i];
         }
         return total;
     }
 
-    public int averageSales(int[] sales) {
-        int total = 0;
-        int average = total;
+    public long averageSales(long[] sales) {
+        long total = 0;
+        long average = total;
         for (int i = 0; i < sales.length; i++) {
             total = total + sales[i];
             average = total / (i + 1);
@@ -19,7 +19,7 @@ public class StatsService {
         return average;
     }
 
-    public int maxSales(int[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -31,7 +31,7 @@ public class StatsService {
         return maxMonth + 1;
     }
 
-    public int minSales(int[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
@@ -42,10 +42,10 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int quaBelowAverage(int[] sales) {
+    public int quaBelowAverage(long[] sales) {
         int monthBelowAverage = 0;
-        int average = averageSales(sales);
-        for (int number : sales) {
+        long average = averageSales(sales);
+        for (long number : sales) {
             if (number < average) {
                 monthBelowAverage = monthBelowAverage + 1;
             }
@@ -54,10 +54,10 @@ public class StatsService {
         return monthBelowAverage;
     }
 
-    public int quaAboveAverage(int[] sales) {
+    public int quaAboveAverage(long[] sales) {
         int monthAboveAverage = 0;
-        int average = averageSales(sales);
-        for (int numb : sales) {
+        long average = averageSales(sales);
+        for (long numb : sales) {
             if (numb > average) {
                 monthAboveAverage = monthAboveAverage + 1;
             }
